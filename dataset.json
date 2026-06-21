@@ -1,14 +1,17 @@
 [
   {
-    "task": "Extract the AWS account ID from an ARN string like 'arn:aws:s3:::my-bucket/key'",
-    "format": "regex"
+    "task": "Parse an AWS S3 bucket name from a full S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and extract only the bucket name",
+    "format": "regex",
+    "solution_criteria": "Use a regex pattern to match and capture the bucket name between 's3://' and the first forward slash. The bucket name should contain only alphanumeric characters, hyphens, and periods."
   },
   {
-    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message",
-    "format": "python"
+    "task": "Create a JSON configuration object for an AWS Lambda function that specifies the function name, runtime (Python 3.11), timeout (30 seconds), memory (256 MB), and an environment variable for a database connection string",
+    "format": "json",
+    "solution_criteria": "Generate a valid JSON object with appropriate keys for Lambda configuration. Include nested objects/arrays where necessary and ensure all values are properly typed (strings, numbers, objects)."
   },
   {
-    "task": "Create a JSON configuration object for an AWS Lambda environment with variables for database connection, API key, and region",
-    "format": "json"
+    "task": "Write a Python function that takes an AWS CloudWatch log event and extracts the message field from nested event data",
+    "format": "python",
+    "solution_criteria": "Create a function that safely handles JSON parsing, accesses nested dictionaries, and returns the message string. Should include basic error handling for missing or malformed data."
   }
 ]
