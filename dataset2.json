@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "85 kg",
+      "goal": "Build muscle mass with caloric surplus for strength training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan covers all 3 meals plus snacks for a full day",
+      "Provides high protein distribution (minimum 1.6g per kg body weight) across meals",
+      "Includes caloric surplus appropriate for muscle building (approximately 500 kcal above maintenance)",
+      "Meals are practical, compact, and concise in description"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) needing high protein distribution and caloric surplus for muscle building"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "68 kg",
+      "goal": "Marathon training with high carbohydrate intake and optimal meal timing around a 2-hour morning run",
+      "restrictions": "Vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan covers a full day with 3 meals and appropriate snacks",
+      "Includes pre-run, during-run (if applicable), and post-run nutrition strategy",
+      "Total daily carbohydrates support endurance training demands (approximately 8-10g per kg body weight)",
+      "All meals align with stated dietary restrictions"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-performance endurance athlete (marathon runner) requiring high carbohydrate intake and specific timing around training sessions"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "72 kg",
+      "goal": "Build muscle and endurance for competitive soccer",
+      "restrictions": "Vegan diet, no nuts or tree nuts due to allergy"
+    },
+    "solution_criteria": [
+      "Meal plan covers all 3 meals plus snacks for one full day",
+      "All meals are vegan with no nuts or tree nuts",
+      "Provides adequate protein and carbohydrates for athletic performance and muscle building",
+      "Meals are practical and compact (quick to prepare)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific constraint scenario (e.g., an athlete with a food allergy or dietary restriction like vegetarian/vegan) requiring creative meal substitutions while maintaining athletic nutrition"
+  }
+]
