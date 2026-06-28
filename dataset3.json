@@ -1,0 +1,51 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "The Romantic movement's emphasis on individual consciousness and emotional authenticity fundamentally challenged Enlightenment rationalism, yet this philosophical rupture cannot be divorced from its historical context in post-Napoleonic Europe. Scholars have increasingly recognized how Wordsworth's concept of the 'spontaneous overflow of powerful feelings' intersects with Hegelian dialectics and the rise of nationalist sentiment, while simultaneously reflecting anxieties about industrialization and the commodification of nature. Furthermore, the period's literary innovations in narrative technique\u2014particularly the development of psychological realism in novelists like George Eliot\u2014mirror broader epistemological shifts in how knowledge itself was being theorized, from empiricist observation to phenomenological experience."
+    },
+    "solution_criteria": [
+      "Extracts key abstract conceptual themes spanning literature, history, and philosophy (e.g., Romanticism, rationalism, consciousness, nationalism, industrialization, epistemology)",
+      "Identifies both explicit topics (named movements, figures, concepts) and implicit interdisciplinary connections present in the passage",
+      "Returns results as a JSON array of strings with appropriate granularity for scholarly discourse"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a humanities passage containing interdisciplinary topics (literature, history, philosophy) to verify accurate extraction of abstract conceptual themes"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study employs a novel machine learning approach utilizing convolutional neural networks (CNNs) with ResNet-50 architecture to classify histopathological images of malignant melanoma. We implemented transfer learning techniques on a dataset of 15,847 dermoscopic images, achieving 94.7% accuracy using cross-entropy loss functions and stochastic gradient descent optimization with a learning rate of 0.001. The methodology incorporates data augmentation strategies including rotation, horizontal flipping, and color jittering to mitigate overfitting. Our results demonstrate superior performance compared to traditional support vector machine (SVM) classifiers and conventional image processing methods, with receiver operating characteristic (ROC) curve analysis yielding an area under the curve (AUC) of 0.968. The model's computational efficiency was evaluated on GPU-accelerated hardware, processing 128 samples per second with minimal latency."
+    },
+    "solution_criteria": [
+      "Extracts specialized terminology and methodologies as distinct topics (e.g., convolutional neural networks, ResNet-50, transfer learning, cross-entropy loss, stochastic gradient descent)",
+      "Includes application domain and technical outcomes (e.g., histopathological image classification, melanoma detection, ROC analysis)",
+      "Returns output as a valid JSON array of strings with no additional formatting or explanations"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a technical STEM passage containing domain-specific jargon, methodologies, and numerical data to ensure specialized terminology is properly identified as distinct topics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study investigates the intersection of machine learning and natural language processing for sentiment analysis in social media contexts. We employ deep neural networks, specifically transformer-based architectures like BERT, to classify emotional content across multilingual datasets. Our approach addresses key challenges in NLP including tokenization, embedding representation, and contextual understanding of language nuances. Machine learning models are trained on annotated corpora to detect sentiment polarity\u2014positive, negative, and neutral\u2014while simultaneously identifying emotion categories such as anger, joy, and sadness. The neural network architecture leverages attention mechanisms to capture semantic relationships between words, improving upon traditional NLP methods that relied on bag-of-words representations. Results demonstrate that transformer models outperform conventional machine learning classifiers in handling linguistic ambiguity and sarcasm detection within social media text."
+    },
+    "solution_criteria": [
+      "Extracts all major topics without redundancy (e.g., 'machine learning' and 'neural networks' should not both appear if one is a subset of the other)",
+      "Avoids overly granular extractions (e.g., 'BERT' should not be listed separately if 'transformer-based architectures' is already included)",
+      "Includes distinct, non-overlapping concepts at an appropriate level of abstraction for scholarly discourse"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a short, densely-packed abstract with overlapping or nested concepts to assess whether the prompt handles topic deduplication and avoids redundant or overly granular extractions"
+  },
+  {
+    "prompt_inputs": {
+      "content": "The study examined metabolic pathways in cultured hepatocytes exposed to varying glucose concentrations. Cells maintained in high-glucose media demonstrated increased lactate production and elevated ATP synthesis rates compared to control conditions. Interestingly, mitochondrial morphology appeared relatively unchanged, though electron transport chain activity showed modest fluctuations. The findings suggest compensatory mechanisms may regulate energy homeostasis, though the precise molecular actors remain elusive. Downstream signaling cascades involving phosphorylation events were not directly assessed in this preliminary investigation."
+    },
+    "solution_criteria": [
+      "Extracts only explicitly stated topics (e.g., metabolic pathways, hepatocytes, glucose, lactate production, ATP synthesis, mitochondrial morphology, electron transport chain)",
+      "Does not infer latent themes or unstated concepts (e.g., does not add 'cellular stress response' or 'metabolic regulation' unless explicitly mentioned)",
+      "Returns results as a valid JSON array of strings",
+      "Avoids including methodological descriptions or speculative statements as topics"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a passage containing implicit topics and understated subjects to evaluate whether the prompt extracts only explicitly mentioned topics or attempts to infer latent themes"
+  }
+]
